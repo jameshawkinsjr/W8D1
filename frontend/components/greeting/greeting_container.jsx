@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import Greeting from './greeting';
-import { logout } from '../../actions/session_actions'
+import { logout } from '../../actions/session_actions';
 
 
 const mapStateToProps = state => ({
-    currentUser: state.session.currentUser,
+    currentUser: state.entities.users[state.session.currentUser],
   });
   
   const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
   });
   
-  export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+  export default connect(mapStateToProps, mapDispatchToProps)(Greeting);
   
