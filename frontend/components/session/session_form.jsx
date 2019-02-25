@@ -47,6 +47,7 @@ export default class SessionForm extends React.Component {
                     type="email"
                     value={this.state.email}
                     onChange={this.handleChange('email')}
+                    autoComplete="off"
                 />
             </label>
             )
@@ -67,6 +68,7 @@ export default class SessionForm extends React.Component {
                             type="text"
                             value={this.state.username}
                             onChange={this.handleChange('username')}
+                            autoComplete="off"
                         />
                     </label>
                     <label> Password:
@@ -74,6 +76,7 @@ export default class SessionForm extends React.Component {
                             type="password"
                             value={this.state.password}
                             onChange={this.handleChange('password')}
+                            autoComplete="off"
                         />
                     </label>
                     {email}
