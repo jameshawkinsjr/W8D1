@@ -7,9 +7,7 @@ class Api::SessionsController < ApplicationController
       login!(@user)
       # redirect_to somewhere
     else
-      render json: {
-        message: "you wrong",
-      },
+      render json: ["Incorrect Email or Password"],
       status: 401 
     end
   end
@@ -19,9 +17,7 @@ class Api::SessionsController < ApplicationController
       logout!
       render json: {}
     else 
-      render json: {
-        message: "no one home",
-      },
+      render json: ["No account logged in"],
       status: 401
     end
   end
